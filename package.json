@@ -1,7 +1,7 @@
 {
   "name": "educacross-chalenge",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,9 @@
     "@popperjs/core": "^2.11.6",
     "axios": "^1.3.2",
     "bootstrap": "^5.3.0-alpha1",
+    "bootstrap-icons": "^1.10.3",
     "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
