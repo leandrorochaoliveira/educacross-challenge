@@ -6,4 +6,8 @@ import './scss/styles.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
-createApp(App).mount('#app')
+import store from './src/store'
+
+const app = createApp(App)
+app.use(store)
+app.mount('#app')
