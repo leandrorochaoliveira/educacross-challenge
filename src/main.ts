@@ -1,13 +1,11 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+//import * as bootstrap from 'bootstrap'
+import "@fontsource/nunito"
 import './scss/styles.scss'
 
-// Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
+//import store from './store'
+//createApp(App).use(store).mount('#app')
 
-import store from './src/store'
-
-const app = createApp(App)
-app.use(store)
-app.mount('#app')
+import router from './router'
+createApp(App).use(router).mount('#app')

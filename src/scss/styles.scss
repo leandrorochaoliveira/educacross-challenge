@@ -1,4 +1,31 @@
+:root {
+  font-family: "Nunito", sans-serif;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+#app {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
 $primary: #00bdb9;
 $secondary: #7367f0;
 $light: #efefef;
 @import "~bootstrap/scss/bootstrap";
+
