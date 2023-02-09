@@ -25,7 +25,22 @@ body {
 }
 
 $primary: #00bdb9;
+$primary-text: #00bdb9;
+$primary-bg-subtle: red;
 $secondary: #7367f0;
-$light: #efefef;
+$secondary-text: #fff;
+$secondary-bg-subtle: #fff;
+//$light: #efefef;
+$dark: #6f6b7b;
+$font-family-base: "Nunito", sans-serif;
+$body-color: #6f6b7b;
 @import "~bootstrap/scss/bootstrap";
 
+.fs-small {
+  font-size: 0.75rem;
+}
+
+.btn-outline-secondary {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid g-0 ">
     <div class="row">
       <div class="col">
         <Breadcrumb></Breadcrumb>
@@ -18,7 +18,8 @@
     </div>
     <div class="row">
       <div class="col">
-        licen;as
+        <span class="fw-semibold">Licenças consumidas:</span> <span class="fw-semibold">{{ licencasAtivas }}</span> de
+        <span class="fw-semibold">{{ alunos.length }}</span>
       </div>
       <div class="col d-flex justify-content-end">
         acessos
@@ -26,7 +27,8 @@
     </div>
     <div class="row">
       <div class="col">
-        <button type="button" class="btn btn-secondary btn-lg text-white d-flex align-items-center gap-1"><svg
+        <button @click="$router.push('/cadastros/alunos/novo')" type="button"
+          class="btn btn-secondary btn-lg text-white d-flex align-items-center gap-1"><svg
             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus"
             viewBox="0 0 16 16">
             <path
@@ -41,11 +43,21 @@
 </template>
 
 <script>
-import Breadcrumb from "../../../components/Breadcrumb.vue"
+import Breadcrumb from "../../../../components/Breadcrumb.vue"
 export default {
   name: 'AlunosList',
   components: {
     Breadcrumb
+  },
+  data() {
+    return {
+      alunos: [],
+    }
+  },
+  computed: {
+    licencasAtivas() {
+      return this.alunos.filter((aluno) => aluno.acesso === 'ativo').length;
+    }
   }
 }
 

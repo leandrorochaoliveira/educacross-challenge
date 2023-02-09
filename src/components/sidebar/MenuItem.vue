@@ -1,6 +1,7 @@
 <template>
   <li class="nav-item">
-    <router-link :to="{ path: path }" class="nav-link link-dark py-3 mb-1 fw-semibold d-flex  align-items-center gap-2"
+    <router-link :to="{ path: path }"
+      class="nav-link link-dark py-2 lh-lg mb-1 fw-semibold d-flex  align-items-center gap-2"
       :class="{ 'active text-primary': active }">
       <slot name="icon"></slot>
       <span class="ml-2">{{ title }}</span>

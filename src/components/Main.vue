@@ -1,10 +1,10 @@
 <template>
   <div class="d-flex h-100">
     <Sidebar></Sidebar>
-    <div class="flex-fill flex-grow-1 bg-light p-4">
+    <main class="flex-fill flex-grow-1 p-4">
       <Navbar></Navbar>
       <router-view></router-view>
-    </div>
+    </main>
   </div>
 
 </template>
@@ -20,3 +20,8 @@ export default {
 }
 
 </script>
+<style lang="scss" scoped>
+main {
+  background-color: #efefef;
+}
+</style>
