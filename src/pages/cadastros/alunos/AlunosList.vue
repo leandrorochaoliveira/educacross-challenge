@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import Breadcrumb from "../../../components/BreadCrumb.vue"
+import Breadcrumb from "../../../components/Breadcrumb.vue"
 export default {
   name: 'AlunosList',
   components: {
