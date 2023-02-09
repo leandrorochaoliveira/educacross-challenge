@@ -2,7 +2,7 @@
   <li class="nav-item">
     <router-link :to="{ path: path }"
       class="nav-link link-dark py-2 lh-lg mb-1 fw-semibold d-flex  align-items-center gap-2"
-      :class="{ 'active text-primary': active }">
+      exactActiveClass="active text-primary">
       <slot name="icon"></slot>
       <span class="ml-2">{{ title }}</span>
     </router-link>
@@ -20,17 +20,13 @@ export default {
       required: true,
     }
   },
-  computed: {
-    active() {
-      return this.$router.currentRoute.value.path == this.path
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 .nav-item .nav-link.active {
   background-color: rgb(0, 189, 185, 0.2);
+  color: var(--bs-primary) !important;
 
   &:hover {
     color: #fff !important;
