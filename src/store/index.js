@@ -4,10 +4,10 @@ import alunos from './modules/alunos'
 
 const debug = process.env.NODE_ENV !== 'production'
 
-export default createStore({
+export default  createStore({
   modules: {
-    cart,
-    products
+    turmas,
+    alunos
   },
   strict: debug,
   plugins: debug ? [createLogger()] : []

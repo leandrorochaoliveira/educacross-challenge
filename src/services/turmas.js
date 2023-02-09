@@ -1,5 +1,5 @@
 import axios from 'axios';
-import useMock from './useMock';
+import useMock from '../mock/turmasMock';
 
 const mockRequests = true;
 const baseURL = '/';
