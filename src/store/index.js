@@ -4,7 +4,7 @@ import alunos from './modules/alunos'
 
 const debug = process.env.NODE_ENV !== 'production'
 
-export default  createStore({
+const store = createStore({
   modules: {
     turmas,
     alunos
@@ -12,3 +12,5 @@ export default  createStore({
   strict: debug,
   plugins: debug ? [createLogger()] : []
 })
+
+export default store

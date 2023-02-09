@@ -13,5 +13,13 @@ if (mockRequests) {
 }
 
 export const fetchAllTurmas = () => {
-  return client.get('/turmas');
+  return new Promise((resolve, reject) => {
+    client.get('/turmas').then(function (response) {
+      resolve(response.data || []);
+    })
+    .catch(function (error) {
+      reject()
+    });
+  })
+
 };

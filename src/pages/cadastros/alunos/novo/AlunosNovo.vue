@@ -36,6 +36,9 @@ export default {
   name: 'AlunosNovo',
   components: {
     Step1, Step2, Step3
+  },
+  mounted() {
+    this.$store.dispatch('getAllTurmas')
   }
 }
 
